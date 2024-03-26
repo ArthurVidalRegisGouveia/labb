@@ -1,0 +1,28 @@
+package src.br.edu.ufcg.computacao.mrbet;
+
+import java.util.Objects;
+
+public class Campeonato {
+    private int participantes;
+    private String nome;
+    private Time[] times;
+
+    public Campeonato(int participantes, String nome) {
+        this.participantes = participantes;
+        this.nome = nome;
+        times = new Time[];
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Campeonato that = (Campeonato) o;
+        return Objects.equals(nome, that.nome);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome);
+    }
+}
