@@ -1,0 +1,122 @@
+package src.br.edu.ufcg.computacao.mrbet;
+
+public class MrBetMain {
+    public static void main(String[] args) {
+        MrBetSistema mr = new MrBetSistema();
+        Scanner scanner = new Scanner(System.in);
+        String escolha = "";
+        while (true) {
+            escolha = menu(scanner);
+            comando(escolha, fn, scanner);
+        }
+    }
+
+
+    private static String menu(Scanner scanner) {
+        System.out.println(
+                "\n" +
+                        "(M)Minha inclusão de times\n" +
+                        "(R)Recuperar time\n" +
+                        "(.)Adicionar campeonato\n" +
+                        "(B) Bora incluir time em campeonato e Verificar se time está em campeonato\n" +
+                        "(E) Exibir campeonatos que o time participa\n" +
+                        "(T) Tentar a sorte e status\n" +
+                        "(!)Já pode fechar o programa!\n" +
+                        "\n" +
+                        "Opção> ");
+        return scanner.next().toUpperCase();
+    }
+
+    private static void comando(String opcao, MrBetSistema mr, Scanner scanner) {
+        switch (opcao) {
+            case "M":
+                incluiTimes(mr, scanner);
+                break;
+            case "R":
+                recuperaTimes(mr, scanner);
+                break;
+            case ".":
+                adicionaCampeonato(mr, scanner);
+                break;
+            case "B":
+                incluiVerificaCampeonato(mr, scanner);
+                break;
+            case "E":
+                exibeCampeonato(mr);
+                break;
+            case "T":
+                tentaSorte(mr, scanner);
+                break;
+            case "!":
+                sai();
+                break;
+            default:
+                System.out.println("OPÇÃO INVÁLIDA!");
+        }
+    }
+
+    private static void sai() {
+        System.exit(0);
+    }
+
+    private static void incluiTimes(MrBetSistema mr, Scanner scanner) {
+
+    }
+
+    private static void recuperaTimes(MrBetSistema mr, Scanner scanner) {
+
+    }
+
+    private static void adicionaCampeonato(MrBetSistema mr, Scanner scanner) {
+
+    }
+
+    private static void incluiVerificaCampeonato(MrBetSistema mr, Scanner scanner) {
+
+    }
+    private static void exibeCampeonato(MrBetSistema mr) {
+
+    }
+    private static void tentaSorte(MrBetSistema mr, Scanner scanner) {
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
